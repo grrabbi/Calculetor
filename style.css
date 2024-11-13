@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('./back.png') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .calculator {
+    width: 360px;
+    background-color: rgba(34, 34, 34, 0.9);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  #display {
+    width: 100%;
+    padding: 20px;
+    font-size: 26px;
+    text-align: right;
+    border: none;
+    background-color: #111;
+    color: #fff;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+  
+  button {
+    padding: 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+  }
+  
+  button:hover {
+    background-color: #444;
+  }
+  
+  button:active {
+    transform: scale(0.95);
+  }
+  
+  button.clear {
+    background-color: #e74c3c;
+  }
+  
+  button.delete {
+    background-color: #f39c12;
+  }
+  
+  button.equals {
+    background-color: #27ae60;
+    grid-column: span 2;
+  }
+  
+  button.zero {
+    grid-column: span 2;
+  }
+  
+  button.clear:hover {
+    background-color: #c0392b;
+  }
+  
+  button.delete:hover {
+    background-color: #e67e22;
+  }
+  
+  button.equals:hover {
+    background-color: #2ecc71;
+  }
+  
+  .buttons > button:nth-child(15) {
+    grid-column: 3;
+  }
+  
